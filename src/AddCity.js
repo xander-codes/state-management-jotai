@@ -1,18 +1,33 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useAtom} from "jotai";
 import {CITIES_ATOM} from "./STATES";
 
 const AddCity = () => {
     const [cities, setCity] = useAtom(CITIES_ATOM);
+    const [name, setName] = useState("");
+
+    const handleChange = event => setName(event.target.value);
+
+    useEffect(() => {
+        console.log(cities);
+    }, [cities]);
+
     const addCity = () => {
-        setCity([...cities, "Kyoto"])
+        if(name !== "") setCity([...cities, name]);
+        setName("");
     }
 
     return (
         <>
             <h5>AddCity component:</h5>
-            <input type="button" id="button" value='press me to add "Kyoto" to cities list'
-            onClick={addCity}/>
+            <input
+                type="text"
+                value={name}
+                onChange={handleChange}
+            />
+            <h3>{name}</h3>
+            <input type="button" id="button" value='Add'
+                   onClick={addCity}/>
         </>
     );
 }

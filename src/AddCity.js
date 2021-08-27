@@ -4,6 +4,7 @@ import {CITIES_ATOM} from "./STATES";
 
 const AddCity = () => {
     const [cities, setCity] = useAtom(CITIES_ATOM);
+
     const addCity = () => {
         setCity([...cities, "Kyoto"])
     }

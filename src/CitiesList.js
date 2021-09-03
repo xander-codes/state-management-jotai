@@ -7,7 +7,7 @@ const CitiesList = () => {
 
     return <>
         <h5>Cities list component: </h5>
-        {cities.map((city, i) => <p key={i}>{city}</p>)}
+        {cities.map((city, i) => <p key={i}> * {city}</p>)}
     </>
 }
 

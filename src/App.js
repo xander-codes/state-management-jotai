@@ -7,10 +7,10 @@ import Greeting from "./Greeting";
 
 const App = () => (
     <>
-        {/*<Country/>*/}
-        {/*<AddCity/>*/}
-        {/*<CitiesList/>*/}
-        <Greeting/>
+        <Country/>
+        <AddCity/>
+        <CitiesList/>
+        {/*<Greeting/>*/}
     </>
 );
 

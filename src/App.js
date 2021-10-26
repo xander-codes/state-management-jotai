@@ -10,6 +10,7 @@ const App = () => (
         <Country/>
         <AddCity/>
         <CitiesList/>
+
         {/*<Greeting/>*/}
     </>
 );

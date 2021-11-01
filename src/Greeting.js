@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import * as superagent from "superagent";
 
 const Greeting = () => {
     const [greetings, setGreeting] = useState([]);
@@ -31,18 +32,64 @@ const Greeting = () => {
         setGithubData(response.data);
     }
 
-    const getBE = () => {
-        axios.get("http://localhost:8080/greet")
-            .then(response => {
-                console.log(response.data);
-                setGreeting(response.data);
-            })
+    const getBE = async () => {
+        // const response = await ky.get('https://api.github.com/users/mapbox');
+        // console.log(response);
+
+        // const a = await axios.get('https://api.github.com/orgs/axios');
+        // console.log(a);
+        //
+        // const f = await fetch('https://api.github.com/orgs/axios');
+        // const r = await f.json();
+        // console.log(r);
+
+        // axios.get("http://localhost:8080/greet")
+        //     .then(response => {
+        //         console.log(response.data);
+        //         setGreeting(response.data);
+        //     })
+        // let resp = await axios('http://localhost:8080/greet');
+        // console.log(resp.data);
+
+        // superagent.get('https://api.github.com/users/mapbox')
+        //     .end((err, res) => {
+        //         if (err) {
+        //             return console.log(err);
+        //         }
+        //         console.log(res.body);
+        //         // console.log(res.body);
+        //     });
+
+        const res = await superagent.get('http://localhost:8080/greet');
+        console.log(res);
+    }
+
+    const postBE = async () => {
+        // let response = await axios.post("http://localhost:8080/greet", {
+        //     'content': "hy",
+        //     'address': {
+        //         'street': 'strada 1',
+        //         'number': 13
+        //     }
+        // });
+        // console.log(response.data);
+        const res = await superagent
+            .post("http://localhost:8080/greet")
+            .send({
+                'content': "hy",
+                'address': {
+                    'street': 'strada 1',
+                    'number': 19
+                }
+            });
+        console.log(res.body);
     }
 
     return <>
         <h2>Greetings: </h2>
         <input type="button" value="get from github" onClick={getGithub}/>
         <input type="button" value="get from BE" onClick={getBE}/>
+        <input type="button" value="POST from BE" onClick={postBE}/>
         {greetings.map((greet) => <p key={greet.id}>{greet.content}</p>)}
 
         <p>{githubData.login}</p>

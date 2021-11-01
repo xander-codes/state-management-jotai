@@ -1,23 +1,34 @@
-import React, { useState } from 'react';
-import {useAtom} from "jotai";
-import {CITIES_ATOM} from "./STATES";
+import React, {useState} from 'react';
 import axios from "axios";
 
 const Greeting = () => {
     const [greetings, setGreeting] = useState([]);
     const [githubData, setGithubData] = useState({});
 
-    const getGithub = () => {
-        axios.get('https://api.github.com/users/mapbox')
-            .then((response) => {
-                console.log(response.data);
-                console.log(response.status);
-                console.log(response.statusText);
-                console.log(response.headers);
-                console.log(response.config);
-                console.log(response);
-                setGithubData(response.data);
-            });
+    // const getGithub = () => {
+    //     axios.get('https://api.github.com/users/mapbox')
+    //         .then((response) => {
+    //             console.log(response.data);
+    //             console.log(response.status);
+    //             console.log(response.statusText);
+    //             console.log(response.headers);
+    //             console.log(response.config);
+    //             console.log(response);
+    //             setGithubData(response.data);
+    //         });
+    // }
+
+    const getGithub = async () => {
+        // const r = await fetch('https://api.github.com/users/mapbox')
+        //     .then(r =>console.log(JSON.stringify(r)))
+        //     .then(json => console.log(json));
+        const response = await axios.get('https://api.github.com/users/mapbox');
+        // console.log(response.status);
+        // console.log(response.statusText);
+        // console.log(response.headers);
+        // console.log(response.config);
+        console.log(response);
+        setGithubData(response.data);
     }
 
     const getBE = () => {

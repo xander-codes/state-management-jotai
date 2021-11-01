@@ -3,15 +3,12 @@ import Country from "./Country";
 import CitiesList from "./CitiesList";
 import AddCity from "./AddCity";
 import Greeting from "./Greeting";
+import Razvan from "./Razvan";
 
 
 const App = () => (
     <>
-        <Country/>
-        <AddCity/>
-        <CitiesList/>
-
-        {/*<Greeting/>*/}
+        <Greeting/>
     </>
 );
 

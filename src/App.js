@@ -8,8 +8,8 @@ import Contacts from "./Contacts";
 
 const App = () => (
     <>
-        {/*<Greeting/>*/}
-        <Contacts/>
+        <Greeting/>
+        {/*<Contacts/>*/}
     </>
 );
 

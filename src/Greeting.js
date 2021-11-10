@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import * as superagent from "superagent";
+import {clg} from "./UtilFunctions";
 
 const Greeting = () => {
     const [greetings, setGreeting] = useState([]);
@@ -28,7 +29,7 @@ const Greeting = () => {
         // console.log(response.statusText);
         // console.log(response.headers);
         // console.log(response.config);
-        console.log(response);
+        clg(response);
         setGithubData(response.data);
     }
 

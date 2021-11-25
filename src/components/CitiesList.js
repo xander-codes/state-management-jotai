@@ -1,6 +1,6 @@
 import React from "react";
 import {useAtom} from "jotai";
-import {CITIES_ATOM} from "./STATES";
+import {CITIES_ATOM} from "../STORE";
 
 const CitiesList = () => {
     const [cities, setCities] = useAtom(CITIES_ATOM);

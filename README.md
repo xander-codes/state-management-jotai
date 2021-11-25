@@ -1,6 +1,6 @@
 # Nano React App to try the jotai library
 
-All states declared in STATES.js file
+All states declared in STORE.js file
 Country component uses/displays only the COUNTRY_ATOM state.  
 CitiesList component displays the CITIES_ATOM state.  
 AddCity component adds a string (city) on every press of its button into the CITIES_ATOM state.

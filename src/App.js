@@ -1,15 +1,9 @@
 import React from "react";
-import Country from "./Country";
-import CitiesList from "./CitiesList";
-import AddCity from "./AddCity";
-import Greeting from "./Greeting";
-import Contacts from "./Contacts";
-
+import Post from "./components/Post";
 
 const App = () => (
     <>
-        <Greeting/>
-        {/*<Contacts/>*/}
+        <Post/>
     </>
 );
 

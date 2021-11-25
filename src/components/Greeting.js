@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import * as superagent from "superagent";
-import {clg} from "./UtilFunctions";
 
 const Greeting = () => {
     const [greetings, setGreeting] = useState([]);
@@ -29,7 +28,6 @@ const Greeting = () => {
         // console.log(response.statusText);
         // console.log(response.headers);
         // console.log(response.config);
-        clg(response);
         setGithubData(response.data);
     }
 
@@ -90,7 +88,7 @@ const Greeting = () => {
         <h2>Greetings: </h2>
         <input type="button" value="get from github" onClick={getGithub}/>
         <input type="button" value="get from BE" onClick={getBE}/>
-        <input type="button" value="POST from BE" onClick={postBE}/>
+        <input type="button" value="POST in BE" onClick={postBE}/>
         {greetings.map((greet) => <p key={greet.id}>{greet.content}</p>)}
 
         <p>{githubData.login}</p>

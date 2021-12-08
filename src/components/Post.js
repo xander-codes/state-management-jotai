@@ -36,10 +36,10 @@ const Post = () => {
             {articles.map(art => <p key={art.id}>article id: {art.id} <br/> article name: {art.name}</p>)}
             <hr/>
             <h3>Json placeholder post data:</h3>
-            <p>{post.id}</p>
-            <p>{post.title}</p>
-            <p>{post.body}</p>
-            <p>{post.userId}</p>
+            <p><b><i>post id: </i></b>{post.id}</p>
+            <p><b><i>post title: </i></b>{post.title}</p>
+            <p><b><i>post body: </i></b>{post.body}</p>
+            <p><b><i>post userId: </i></b>{post.userId}</p>
         </div>
     );
 };

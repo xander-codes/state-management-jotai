@@ -1,9 +1,14 @@
 import React from "react";
-import Post from "./components/Post";
+import City from "./components/city/City";
+import CitiesList from "./components/city/CitiesList";
+import AddCity from "./components/city/AddCity";
+
 
 const App = () => (
     <>
-        <Post/>
+        <City/>
+        <CitiesList/>
+        <AddCity/>
     </>
 );
 

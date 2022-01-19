@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useAtom} from "jotai";
-import {CITIES_ATOM} from "../STORE";
+import {CITIES_ATOM} from "../../STORE";
 
 const AddCity = () => {
     const [cities, setCity] = useAtom(CITIES_ATOM);
@@ -14,12 +14,12 @@ const AddCity = () => {
     }, [cities]);
 
     const addCity = () => {
-        if(name !== "") setCity([...cities, name]);
+        if (name !== "") setCity([...cities, name]);
         setName("");
     }
 
     return (
-        <>
+        <div style={{backgroundColor: "lightcyan"}}>
             <h5>AddCity component:</h5>
             <input
                 type="text"
@@ -29,7 +29,7 @@ const AddCity = () => {
             <h3>{name}</h3>
             <input type="button" id="button" value='Add'
                    onClick={addCity}/>
-        </>
+        </div>
     );
 }
 

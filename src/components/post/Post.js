@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useAtom} from "jotai";
-import {POST, PRE_FILLED_ARTICLES} from "../STORE";
+import {POST, PRE_FILLED_ARTICLES} from "../../STORE";
 import axios from "axios";
 
 

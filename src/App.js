@@ -1,14 +1,15 @@
 import React from "react";
-import City from "./components/city/City";
-import CitiesList from "./components/city/CitiesList";
-import AddCity from "./components/city/AddCity";
+import Login from "./components/login/Login";
+import LoginDynamicState from "./components/login/LoginDynamicState";
 
 
 const App = () => (
     <>
-        <City/>
-        <CitiesList/>
-        <AddCity/>
+        {/*<City/>*/}
+        {/*<CitiesList/>*/}
+        {/*<AddCity/>*/}
+        <Login/>
+        <LoginDynamicState/>
     </>
 );
 

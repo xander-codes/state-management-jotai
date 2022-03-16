@@ -1,16 +1,22 @@
 import React from "react";
-import Login from "./components/login/Login";
-import LoginDynamicState from "./components/login/LoginDynamicState";
-
+import "rsuite/dist/rsuite.min.css";
+import City from "./components/city/City";
+import CitiesList from "./components/city/CitiesList";
+import AddCity from "./components/city/AddCity";
 
 const App = () => (
     <>
-        {/*<City/>*/}
-        {/*<CitiesList/>*/}
-        {/*<AddCity/>*/}
-        <Login/>
-        <LoginDynamicState/>
+        <City/>
+        <CitiesList/>
+        <AddCity/>
+        {/*<Login/>*/}
+        {/*<LoginDynamicState/>*/}
+        {/*<Greeting/>*/}
+        {/*<Post />*/}
+        {/*<ExampleParent/>*/}
     </>
+
+
 );
 
 export default App;

@@ -3,3 +3,5 @@ dist
 .cache
 .parcel-cache
 .idea
+
+.DS_Store

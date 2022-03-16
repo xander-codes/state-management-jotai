@@ -5,6 +5,23 @@ export const CITY_ATOM = atom('Oslo');
 //initial cities array
 export const CITIES_ATOM = atom(['Tokyo', 'Osaka']);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //empty initial object
 export const POST = atom({});
 

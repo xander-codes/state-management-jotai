@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useAtom} from "jotai";
 import {POST, PRE_FILLED_ARTICLES} from "../../STORE";
 import axios from "axios";
+import {RangeSlider} from "rsuite";
 
 
 const Post = () => {
@@ -34,12 +35,19 @@ const Post = () => {
         <div>
             <h3>New articles:</h3>
             {articles.map(art => <p key={art.id}>article id: {art.id} <br/> article name: {art.name}</p>)}
+
             <hr/>
+
             <h3>Json placeholder post data:</h3>
             <p><b><i>post id: </i></b>{post.id}</p>
             <p><b><i>post title: </i></b>{post.title}</p>
             <p><b><i>post body: </i></b>{post.body}</p>
             <p><b><i>post userId: </i></b>{post.userId}</p>
+
+            <RangeSlider
+                defaultValue={[10, 50]}/>
+
+            <Range />
         </div>
     );
 };

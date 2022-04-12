@@ -6,22 +6,6 @@ export const CITY_ATOM = atom('Oslo');
 export const CITIES_ATOM = atom(['Tokyo', 'Osaka']);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //empty initial object
 export const POST = atom({});
 

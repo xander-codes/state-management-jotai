@@ -1,5 +1,4 @@
 import React from "react";
-import "rsuite/dist/rsuite.min.css";
 import City from "./components/city/City";
 import CitiesList from "./components/city/CitiesList";
 import AddCity from "./components/city/AddCity";

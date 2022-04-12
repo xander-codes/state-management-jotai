@@ -1,9 +1,7 @@
 import React, {useEffect} from 'react';
 import {useAtom} from "jotai";
 import {POST, PRE_FILLED_ARTICLES} from "../../STORE";
-import axios from "axios";
-import {RangeSlider} from "rsuite";
-
+import axios from "axios"
 
 const Post = () => {
     const [articles, setArticles] = useAtom(PRE_FILLED_ARTICLES);
@@ -44,10 +42,6 @@ const Post = () => {
             <p><b><i>post body: </i></b>{post.body}</p>
             <p><b><i>post userId: </i></b>{post.userId}</p>
 
-            <RangeSlider
-                defaultValue={[10, 50]}/>
-
-            <Range />
         </div>
     );
 };
